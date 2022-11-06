@@ -1,8 +1,9 @@
-# Thesis Template of University of Essex
+## Thesis Template of University of Essex
 
-This template only work `xelatex` and can be run with `pdflatex`. 
+This template only work `xelatex` and can be run with `pdflatex`. The official information of the format can be found at [`postgraduate-research/thesis-format`](https://www.essex.ac.uk/student/postgraduate-research/thesis-format).
 
-## Main Features about the Layout 
+
+## The Main Feature of the Layout 
 
 - double line spacing should be used for everything except quotations, footnotes, captions to plates etc.
 
