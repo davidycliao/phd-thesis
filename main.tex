@@ -1,0 +1,210 @@
+% University of Essex PhD Thesis
+% Author: David, Yen-Chieh Liao
+% Purpose: an example .tex file for the thesis.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                Environment & Packages                    %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ------------------------------------------------------------
+\documentclass[12pt,leqno]{report}
+\usepackage[authordate,natbib,isbn=false,backend=biber]{biblatex-chicago}
+\addbibresource{reference.bib} 
+\usepackage{essex_thesis}
+
+% ------------------------------------------------------------
+% Fond, Ref
+\usepackage{times}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{marginnote}
+\usepackage{xcolor}		                         
+\usepackage{xcolor,colortbl}
+\definecolor{green}{rgb}{0.1,0.1,0.1}
+\newcommand{\done}{\cellcolor{teal}}  %{0.9}
+\newcommand{\hcyan}[1]{{\color{teal} #1}}
+
+% ------------------------------------------------------------
+% Formatting 
+
+\usepackage{tikz}                                % flowchart
+\usepackage{xspace}
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{amsfonts, amsmath, amssymb, bm}      % math fonts and symbols
+\usepackage{xeCJK}
+\usepackage{rotating}                            % rotate the table
+\usepackage[format=hang, justification=centering]{caption}
+\usepackage{dcolumn, multirow, makecell}         % decimal-aligned columns, multi-row cells
+\usepackage[export]{adjustbox}
+\usepackage{rotating}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{graphicx}
+\usepackage{booktabs}                            % Table formatting
+\usepackage{graphicx, float}                     % graphics commands
+\usepackage{setspace}                            % allows toggling of double/single-spacing
+\doublespace                                     % set document spacing to double
+% \singlespace                                   % set document spacing to single \singlespace 
+\usepackage{lipsum}                              % Generating dummy texts
+\usepackage{pdflscape}                           % Allows for making a single page landscape
+\usepackage[hang,flushmargin]{footmisc}          % Removes indent for footnotes
+\usepackage{afterpage}                           % Make landscaped page float
+\newcommand{\floatnote}[1]{\vspace{\abovecaptionskip}\caption*{\textbf{Note:} #1}\vspace{-\abovecaptionskip}}
+
+
+% ------------------------------------------------------------
+% Section Font 
+% --------------------------
+\usepackage{sectsty} 
+\usepackage{authblk} 
+\usepackage[T1]{fontenc}                          % font type
+\usepackage{lmodern}                              % ref: https://www.overleaf.com/learn/latex/Font_typefaces
+\usepackage{bbold}
+\sectionfont{\fontsize{16}{16}\selectfont}        % Fontsize Section 
+\subsectionfont{\fontsize{12}{12}
+\selectfont\itshape}                              % Subsection 
+\subsubsectionfont{\fontsize{12}{12}
+\selectfont}                                      % Subsubsection 
+
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\hypersetup{colorlinks = true,
+            citecolor = darkblue, 
+            linkcolor = darkblue, 
+            urlcolor = darkblue}
+
+% ------------------------------------------------------------
+% Citation
+
+
+\newcommand\citesall[1]{\citeauthor*{#1}'s\ (\citeyear{#1})}
+\newcommand*\mean[1]{\bar{#1}}
+
+% ------------------------------------------------------------
+% Hypothesis
+\newtheorem{hyp}{Hypothesis}
+\newcounter{subhyp} 
+\newcommand{\subhyp}{ 
+    \setcounter{subhyp}{0} 
+    \renewcommand\thehyp{\protect\stepcounter{subhyp}% 
+    \arabic{hyp}\alph{subhyp}\protect\addtocounter{hyp}{-1}} 
+} 
+
+\begin{document}
+\sloppy
+\title{Electoral Reform, Distributive Politics, 
+            and Parties in the Taiwanese Congress} 
+\author{Yen-Chieh (David) Liao}
+
+\date{November 2, 2022}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      Dedication Page                     %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{plain}
+\newenvironment{dedication}
+{\cleardoublepage \vspace*{\stretch{1}}
+  \begin{center} \em}
+  {\end{center} \vspace*{\stretch{3}} }
+\begin{dedication}
+
+To my partner, my supervisors Royce and Nicole, PhD colleagues and all of you who have been there to support me when I was desperately depressed by the eight-month false accusations on HPC Cryptocurrency Mining and multiple unfair investigations during the pandemic. 
+
+\end{dedication}
+
+\tableofcontents
+
+\listoftables
+
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      Thesis Abstract                     %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\input{00-Thesis-Abstract/thesis-abstract}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                       Grant Sponsor                      %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{contributors}
+
+% \end{contributors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                 Chapter 1 (Introduction)                 %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+\clearpage
+\input{01-Chapter-One/first-chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                This is Chapter 2 (Paper 2)               %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Electoral Reform and Disunited Polarisation: Evidence from Legislative Roll Call \label{chap:ch2}    } 
+\clearpage
+\input{02-Chapter-Two/second-chapter} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                This is Chapter 3 (Paper 3)               %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Electoral Reform and Pork Barrel in Parliamentary Questions  \label{chap:ch3}  }
+\clearpage
+\input{03-Chapter-Three/third-chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                 This is Chapter 4 (Paper 1)              %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Mayors and Pork Barrelling: Career Paths and Distributive Spending \label{chap:ch4}}
+\clearpage
+\input{04-Chapter-Four/four-chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                This is Chapter 5 (Conclusion)            %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclusion}
+\clearpage
+\input{05-Chapter-Five/fifth-chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    Appendix Setting                      %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+% Replace \bibliographystyle{plainnat} with \bibliographystyle{agsm} (I learned this here.)
+\printbibliography
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Appendix for Chapter 2                  %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Supplementary Materials of Chapter 2}
+\clearpage
+\input{02-Chapter-Two/second-chapter-appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Appendix for Chapter 3                 %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Supplementary Materials of Chapter 3}
+\clearpage
+\input{03-Chapter-Three/third-chapter-appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Appendix for Chapter 4                  %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Supplementary Materials of Chapter 4}
+\clearpage
+\input{04-Chapter-Four/four-chapter-appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      Acknowledgements                     %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgments}
+The PhD programme and dissertation are funded and supported by the Taiwan Ministry of Education (Jul 2017 - Jul 2021) and the Taiwan National Science and Technology Council Taiwanese Overseas Pioneers Grant (Aug 2021 - Aug 2022). In addition, I gratefully thank Prof. Thomas Saalfeld for providing me with a pre-doctoral fellowship and allowing me to work remotely with the research team at the chair of comparative politics in the University of Bamberg.
+\end{acknowledgments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         CV Page                        %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{curriculumvitae}
+%   Previous degrees and experience.
+% \end{curriculumvitae}
+
+\end{document}
+
+
+

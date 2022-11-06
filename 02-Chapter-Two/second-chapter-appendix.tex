@@ -1,0 +1,44 @@
+\section{Plots of Estimated Legislators' Ideological Positions\label{sec:Plots full}}
+
+This section plots estimated legislators' ideological positions. \autoref{fig:session-plot} plots for the ideological positions of two major parties at a frequency of session. From session 7-1 (the electoral reform in 2008), legislators from the two-major parties underwent a phase of drastic ideological diverging, as the distributions for both parties started moving to both pole (political polarisation).  \autoref{fig:term-plot} displays estimated legislators' ideological positions for all minor parties (DPP and KMT excluded) at a frequency of year. \autoref{fig:individual_point} plots individual legislator's ideal point from two major parties, grouped by year.
+
+\begin{figure}[H]
+\caption{Estimated Legislators' Positions for Two Major Parties across the Legislative Sessions \label{fig:session-plot} }
+\centering{}\includegraphics[scale=0.15]{02-Chapter-Two/image/major_postions_session}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Estimated Legislators' Ideological Positions for Small Parties across Years\label{fig:term-plot}}
+\centering{}\includegraphics[scale=0.15]{02-Chapter-Two/image/minor_postions_year}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Individual Legislator' Ideal Point on a Single Dimension
+for Two Major parties \label{fig:individual_point}}\centering{}\includegraphics[scale=0.14]{02-Chapter-Two/image/individual_point}
+\end{figure}
+
+\clearpage
+
+\section{\centering Robustness Estimation using Sub-samples\label{sec:robustness-check}}
+\subsection{Inter-party Competition and Distances\label{subsec:robustness-inter-party}}
+
+I replicate the estimations results from Section \ref{subsec:disunity-in-co-partisan} using data of DPP and KMT separately to ensure the result of between-party polarisation is not solely driven by any big parties. \autoref{tab:Inter_DM} reports the outcomes. Column 1 and 2 display the result using DPP and KMT respectively. The variable of \textbf{electoral reform } is statistically significant positive (at 1\% critical level in both columns), implying that the electoral reform significantly increases between-party ideological distance (political polarisation) regardless of the party-affiliation, consistent with the results found in \autoref{tab:intra-estimation}.
+
+\input{02-Chapter-Two/table/inter-major-party}
+
+\subsection{Disunited Distances between Co-partisan Legislators \label{subsec:disunity-robust}}
+
+This section replicates the estimations results from Section \autoref{subsec:disunity-in-co-partisan} using observations of DPP and KMT separately to ensure the result of within-party disunity is not solely driven by any big parties. \autoref{tab:Intra_DM} reports the outcomes. Column 1 and 2 display the result using DPP and KMT respectively. The variable of \textbf{electoral reform} is statistically significant positive (at 5\% and 1\% critical level in column 1 and 2, respectively), implying that the electoral reform significantly increased within-party ideological distance regardless of the party-affiliation, consistent with the results found in  \ref{tab:intra-estimation}.
+
+\input{02-Chapter-Two/table/intra-major-party}
+
+\clearpage
+
+\section{Addressing the Heterogeneity in Bills Voted across Year\label{sec:Addressing-the-heterogeneity}} 
+
+Then, there is also the heterogeneity in years that could impact the legislature ideological position through voting decision, due to multiple reasons. First, in some years, bills voted were more likely to cause inter- or intraparty disagreement and thus, dispersion in ideological points. Second, in some years, the major social activities or events happened that also could cause disagreement or conflicts in the legislature. For example, in 2006, there was a mass campaign (\textit{Million Voices against Corruption}, President Chen Must Go) led by former DPP Chairman Shih Ming-teh (施明德) to pressure the President Chen Shui-bian (陳水扁) to resign. Therefore, I address the problem concerning the heterogeneity in year by controlling for as many years as possible.\footnote{Some years (2007, 2014 and 2015) are omitted due to multi-collinearity.}  \autoref{tab:heterogeneity of bills} reports the estimation results for inter-party analysis, with (column 2) or without controlling for other effects (column 1). As you can see, \textbf{electoral reform }is still statistically significant positive (at 1\% critical level) and are robust, meaning that the electoral reform caused higher level of inter-party dispersion between KMT and DPP, even if I introduce additional year dummies and control for the passage of time and other attributes.\footnote{Almost all year dummies are statistically significant at the 1\% critical level for both regressions, except year 2008. Estimated coefficients and standard errors for year dummies are omitted due to space limit.}  \autoref{tab:heterogeneity of bills} reports the estimation results for intraparty analysis, with (column 2) or without controlling for other effects (column 1). Similar results are obtained.
+
+\input{02-Chapter-Two/table/robustness-one}
+
+\input{02-Chapter-Two/table/robustness-two}
+

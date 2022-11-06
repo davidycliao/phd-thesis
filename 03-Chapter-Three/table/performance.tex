@@ -1,0 +1,51 @@
+  
+\begin{table}[h]\centering
+\caption{The Performance of CNN, BERT and CNN-BERT }
+\scalebox{0.65}{
+    \begin{threeparttable}
+    \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+        \begin{tabular}{l*{10}{c}}
+        \toprule
+
+                        & \multicolumn{3}{c}{\textbf{CNN}} 
+                        & \multicolumn{3}{c}{\textbf{BERT}} 
+                        & \multicolumn{3}{c}{\textbf{CNN-BERT}} \\
+                        & \multicolumn{1}{c}{\textbf{Precision}}
+                        & \multicolumn{1}{c}{\textbf{Recall} }
+                        & \multicolumn{1}{c}{\textbf{F1-score} }
+                        & \multicolumn{1}{c}{\textbf{Precision} }
+                        & \multicolumn{1}{c}{\textbf{Recall} }
+                        & \multicolumn{1}{c}{\textbf{F1-score} }
+                        & \multicolumn{1}{c}{\textbf{Precision} }
+                        & \multicolumn{1}{c}{\textbf{Recall} }
+                        & \multicolumn{1}{c}{\textbf{F1-score}}  \\
+                                                
+        \midrule
+        \textbf{Non Pork}       & 0.95 & 0.97 & 0.96 & 0.96 & 0.97 & 0.97   & 0.96 & 0.97 & 0.97  \\
+        \textbf{Pork}           & 0.94 & 0.91 & 0.92 & 0.95 & 0.93 & 0.94   & 0.95 & 0.93 & 0.95 \\
+        \textbf{Accuracy}       &      &      & 0.95 & 0.96 &      & 0.96   &      &      & 0.96   \\
+        \textbf{Macro Avg.}      & 0.95 & 0.94 & 0.94 & 0.96 & 0.95 & 0.95   & 0.95 & 0.94 & 0.94  \\
+       \textbf{ Weighted avg.}  & 0.95 & 0.95 & 0.95 & 0.96 & 0.96 & 0.96   & 0.95 & 0.95 & 0.95 \\
+        \midrule
+        \end{tabular}
+        \end{threeparttable}
+}
+\label{tab:performance}
+\end{table}
+
+%       precision    recall  f1-score   support
+
+%           0       0.95      0.99      0.97       229
+%           1       0.98      0.91      0.94       134
+
+%     accuracy                           0.96       363
+%   macro avg       0.96      0.95      0.95       363
+% weighted avg       0.96      0.96      0.96       363
+
+
+%      0       0.95      0.97      0.96      1566
+%           1       0.94      0.91      0.92       825
+
+%     accuracy                           0.95      2391
+%   macro avg       0.95      0.94      0.94      2391
+% weighted avg       0.95      0.95      0.95      2391

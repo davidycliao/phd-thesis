@@ -1,0 +1,31 @@
+
+\section{The Description of Training Data for TextCNN, BERT and CNN-BERT}
+
+\input{03-Chapter-Three/table/data}
+
+\clearpage
+
+\section{Experiments and Results\label{tag:performance}}
+
+In this section, BERT-CNN will be compared with other models such as TextCNN and generic BERT on their abilities to identify pork-barrel features on the holdout set from 15 \% of all pork-barrel legislation. First, \textbf{TextCNN} is the generic model without having a BERT embedding layer. TextCNN here uses initialized spaCy\textquotesingle s pretrained vectors and the Chinese model used in \autoref{tab:performance} can be found at \href{https://spacy.io/models/zh}{https://spacy.io/models/zh}.
+
+As to the \textbf{BERT} model in the second column in \autoref{tab:performance}, I transformed the corpus into word vector representation extracted from BERT with max words 512. At last column, \textbf{CNN-BERT} is approach method used to classified pork-barrel. \textbf{CNN-BERT} maximizes the utilization of knowledge embedded in pre-trained BERT language models by feeding the  contextualized embeddings into several filters and convolution layers of the CNN architecture. 
+
+A intuitive approach to evaluate the performance of classifiers is to compare each model's performance on \textit{accuracy} and \textit{recall}, respectively. Precision is constructed by the accuracy of the positive predictions, whereas the ratio of positive instances correctly detected by the classifiers is recall. However, it is much more useful to consider measurement together, like the F1 score. As in Equation \ref{eqn:precision}, the harmonic mean gives much more weight to low values, whereas the regular mean treats all values equally. As a result, the classifier gets a high \textit{F1 score} the performance of the classifier works better in both recall and precision.
+
+In general, BERT\textquotesingle s performance achieves 96\% in F1-Score in the weighted average, slightly better than  CNN-BERT and then TextCNN. EarlyStop function with patience = 5 from Tensorflow is used to monitor the performance of the training process, which the model stops when there is no improvement within five epochs. Text CNN model was trained until 13 epochs, while the generic BERT model finished at 12 epochs with a learning rate of 1e-08. Last, CNN-BERT costs less time than BERT, completed at 9 epochs.\footnote{TensorBoard tracking different epochs of the experiment is available at \href{https://tensorboard.dev/experiment/2Jm6GKexQiKaLyUz5uKSzg/\#scalars}{https://tensorboard.dev/experiment/2Jm6GKexQiKaLyUz5uKSzg/\#scalars}.}
+
+
+\begin{eqnarray}
+recall = \frac{True Positive}{ True Positive + False Negative}\label{eqn:recall}
+\end{eqnarray}
+
+\begin{eqnarray}
+precision = \frac{ True Positive}{ True Positive + False Positive}\label{eqn:precision}
+\end{eqnarray} 
+
+\begin{eqnarray}  F_1 = \frac{2}{\frac{1}{precision} + \frac{1}{ recall}} = 2 \times \frac{ precision \times  recall}{ precision \times recall} \\
+\notag  = \frac{ True Positive}{ True Positive + \frac{ False Negative \times  False Positive}{2}}\label{eqn:f1}
+\end{eqnarray}
+
+\input{03-Chapter-Three/table/performance}

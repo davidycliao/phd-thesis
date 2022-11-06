@@ -1,0 +1,90 @@
+
+\begin{sidewaystable}[!htbp]
+
+% \begin{table}[h]
+    \centering
+    \caption{Regression Analysis for Pork-barrel Questions}
+\scalebox{1}{
+    \begin{threeparttable}
+    \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+    \begin{tabular}{l*{6}{c}}
+    \toprule 
+
+                &\multicolumn{2}{c}{Full Observation} 
+                &\multicolumn{2}{c}{Large Parties}
+                &\multicolumn{2}{c}{Small Parties}\\
+                 \cline{2-7}  \\
+                &\multicolumn{1}{c}{Model  (1)}
+                &\multicolumn{1}{c}{Model  (2)}
+                &\multicolumn{1}{c}{Model  (3)}
+                &\multicolumn{1}{c}{Model  (4)}
+                &\multicolumn{1}{c}{Model  (5)}
+                &\multicolumn{1}{c}{Model  (6)}\\                
+                &\multicolumn{1}{c}{Interaction}
+                &\multicolumn{1}{c}{+ Controls}
+                &\multicolumn{1}{c}{Interaction}
+                &\multicolumn{1}{c}{(+ Controls)}
+                &\multicolumn{1}{c}{Interaction}
+                &\multicolumn{1}{c}{(+ Controls)}\\
+     \midrule
+
+
+Reform          &  -14.052\sym{***}   &   -13.125\sym{***} 
+                &  -14.959\sym{***}   &   -16.346\sym{***} 
+                &  -11.180            &   4.954         \\
+                &   (3.946)           &   ( 5.085)          
+                &   (4.173)           &   ( 5.569) 
+                &   (8.365)           &   (19.928)          \\
+
+
+Year            &    -.006\sym{***}   &    -.006\sym{***}
+                &    -.006\sym{***}   &    -.008\sym{***} 
+                &    -.002            &    -.001             \\
+                &     (0.001)         &    (0.001)     
+                &     (0.001)         &    (0.001) 
+                &     (0.002)         &    (0.003)            \\
+                
+Reform $\times$ Year   &    .006\sym{***}    &    .006\sym{***}
+                &    .007\sym{***}    &    .008\sym{***} 
+                &    .005             &   -.002                    \\
+                &     (0.001)         &   (0.002)     
+                &     (0.002)         &   (0.002) 
+                &     (0.004)         &   (0.009)         \\
+
+Constant        &   12.610\sym{***}   &    12.713\sym{***} 
+                &   13.732\sym{***}   &    16.206\sym{***} 
+                &    5.091            &     2.712          \\
+                
+                &   (2.129)           &   (2.735)          
+                &   (2.408)           &   (3.672) 
+                &   (5.614)           &   (6.546)          \\
+
+     \midrule
+
+District Fixed Effects&                     &   \checkmark         
+                      &                     &   \checkmark   
+                      &                     &   \checkmark      \\    
+                     
+Legislator Fixed Effects             &                     &   \checkmark         
+                     &                     &   \checkmark   
+                     &                     &   \checkmark      \\   
+                     
+The Reform Year      &    \checkmark      &   \checkmark         
+                     &      \checkmark   &   \checkmark   
+                     &    \checkmark         &   \checkmark      \\   
+                     
+Observations         &    4,252            &    4,252         
+                     &    3,539            &    3,539
+                     &    713              &    713        \\
+Adjusted \(R^{2}\)   &    0.016         &    0.218
+                     &    0.020         &    0.233   
+                     &    0.003         &    0.179     \\
+\bottomrule
+\end{tabular}
+     \begin{tablenotes}
+     Note: * \(p<0.10\),** \(p<0.05\), *** \(p<0.01\). \\ Robust standard errors in parentheses. The district-level pork-barrel parliamentary question at quarter-yearly is regressed on year, electoral reform, and interaction between year and electoral reform, with and without fixed effect controls. The controls include fixed effects for electoral districts, municipalities, and individual legislators and the occurrence of the reform. 
+     \end{tablenotes}
+     \end{threeparttable}
+     }\label{tab:reg}
+% \end{table}
+\end{sidewaystable}

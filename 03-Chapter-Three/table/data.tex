@@ -1,0 +1,36 @@
+\begin{table}[thb!]\centering
+    \begin{threeparttable}
+    \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+    \caption{The Description of Training Data for TextCNN, BERT and CNN-BERT}
+        \begin{tabular}{l*{9}{c}}
+        \toprule
+        
+                        & \multicolumn{3}{c}{\textbf{Text CNN}} 
+                        & \multicolumn{3}{c}{\textbf{BERT}} 
+                        & \multicolumn{3}{c}{\textbf{CNN-BERT}} \\
+                        & \multicolumn{1}{c}{\textbf{Train} }
+                        & \multicolumn{1}{c}{\textbf{Test}} 
+                        & \multicolumn{1}{c}{\textbf{Dev} }
+                        & \multicolumn{1}{c}{\textbf{Train}} 
+                        & \multicolumn{1}{c}{\textbf{Test} }
+                        & \multicolumn{1}{c}{\textbf{Dev}}
+                        & \multicolumn{1}{c}{\textbf{Train}} 
+                        & \multicolumn{1}{c}{\textbf{Test} }
+                        & \multicolumn{1}{c}{\textbf{Dev}}\\
+                                                
+        \midrule
+        \textbf{Pork}           & 4259 & 237 & 237  &  4259 & 237 & 237  & 4259 &  237 & 237 \\
+        \textbf{Non Pork}       & 2259 & 125 & 126  &  2259 & 125 & 126  & 2259 &  125 & 126 \\
+        
+        \midrule
+                       & \multicolumn{3}{c}{7243}   
+                       & \multicolumn{3}{c}{7243}   
+                       & \multicolumn{3}{c}{7243}    \\
+         \midrule
+        \end{tabular}
+        \label{tab:traindata}
+        \begin{tablenotes}
+        Source: Taiwan Pork Barrel Legislation Data \citep{Luor2008, Luor2009, Luor2012}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
