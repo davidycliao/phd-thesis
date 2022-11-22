@@ -13,4 +13,4 @@ This template only work `xelatex` and can be run with `pdflatex`. The official i
 
 - fonts of `Arial` or `Times New Roman` . However, the font used in the thesis is `Latin Modern Roman (\usepackage{lmodern} )`. It looks like `Arial` but nicer.
 
-**Documents**: [`slides`]() | [`paper`](https://github.com/davidycliao/phd-thesis/blob/main/Yen_Chieh_Liao_PhD_Dissertation.pdf)
+**Documents**: [`pdf`](https://github.com/davidycliao/phd-thesis/blob/main/Yen_Chieh_Liao_PhD_Dissertation.pdf)
