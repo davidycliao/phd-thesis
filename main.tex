@@ -55,7 +55,7 @@
 
 % ------------------------------------------------------------
 % Section Font 
-% --------------------------
+% ------------------------------------------------------------
 \usepackage{sectsty} 
 \usepackage{authblk} 
 \usepackage[T1]{fontenc}                          % font type
@@ -75,6 +75,7 @@
 
 % ------------------------------------------------------------
 % Citation
+% ------------------------------------------------------------
 
 
 \newcommand\citesall[1]{\citeauthor*{#1}'s\ (\citeyear{#1})}
@@ -82,6 +83,8 @@
 
 % ------------------------------------------------------------
 % Hypothesis
+% ------------------------------------------------------------
+
 \newtheorem{hyp}{Hypothesis}
 \newcounter{subhyp} 
 \newcommand{\subhyp}{ 
@@ -90,15 +93,41 @@
     \arabic{hyp}\alph{subhyp}\protect\addtocounter{hyp}{-1}} 
 } 
 
+\newtheorem{hyptwo}{Hypothesis}
+\newcounter{hyptwosub} 
+\newcommand{\hyptwosub}{ 
+    \setcounter{hyptwosub}{0} 
+    \renewcommand\thehyp{\protect\stepcounter{hyptwosub}% 
+    \arabic{hyptwo}\alph{hyptwosub}\protect\addtocounter{hyptwo}{-1}} 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                          Title                           %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 \sloppy
 \title{Electoral Reform, Distributive Politics, 
             and Parties in the Taiwanese Congress} 
-\author{Yen-Chieh (David) Liao}
+\author{Yen-Chieh Liao}
 
-\date{November 2, 2022}
+
+\date{January 4, 2023}
 
 \maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      Acknowledgements                    %% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgments}
+The author disclosed receipt of the following financial support for the research activities during the PhD and the completion year of thesis writing. The thesis and PhD programme were generously funded and supported by the Taiwan Ministry of Education (July 2017 - July 2021); the Taiwanese Overseas Pioneers Grant (TOP GRANT), the National Science and Technology Council (NSTC) of Taiwan  (August 2021 - August 2022); the Grants for Research Visiting and Travel of Taiwan Council of Indigenous Peoples. In addition, the author would like to especially thank Prof. Thomas Saalfeld and the Department of Political Science at the University of Bamberg for offering a predoctoral fellow position during the completion year of the PhD (December 2021 to December 2022).
+\end{acknowledgments}
+
+
+\tableofcontents
+\listoftables
+\listoffigures
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                      Dedication Page                     %% 
@@ -109,23 +138,9 @@
   \begin{center} \em}
   {\end{center} \vspace*{\stretch{3}} }
 \begin{dedication}
-
-To my partner, my supervisors Royce and Nicole, PhD colleagues and all of you who have been there to support me when I was desperately depressed by the false accusations of HPC Cryptocurrency Mining and multiple unfair investigations during the pandemic.
-
+To my partner, my supervisors Royce and Nicole, PhD colleagues and all of you who have been there to support me when I was desperately depressed by the eight-month false accusation of HPC Cryptocurrency Mining and multiple unfair investigations during the pandemic.
 \end{dedication}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                      Acknowledgements                     %% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{acknowledgments}
-The PhD programme and dissertation are funded and supported by the Taiwan Ministry of Education (July 2017 - July 2021) and the Taiwan National Science and Technology Council Taiwanese Overseas Pioneers Grant, TOP GRANT (August 2021 - August 2022). I would like to thank Prof. Thomas Saalfeld and the Department of Political Science at the University of Bamberg for supporting my research projects during  PhD completion from August 2021 to December 2022.
-\end{acknowledgments}
-
-\tableofcontents
-
-\listoftables
-
-\listoffigures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                      Thesis Abstract                     %% 
